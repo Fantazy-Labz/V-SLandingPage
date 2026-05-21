@@ -1,0 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,400;0,600;0,700;0,800;0,900;1,400&family=Barlow+Condensed:wght@700;800;900&display=swap');
+
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --lime: #c6f135;
+  --white: #ffffff;
+  --black: #0a0a0a;
+  --dark: #111111;
+}
+
+html, body, #root {
+  height: 100%;
+  font-family: 'Barlow', sans-serif;
+  background: var(--black);
+  color: var(--white);
+  overflow-x: hidden;
+}

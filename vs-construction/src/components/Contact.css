@@ -1,0 +1,217 @@
+/* ── CONTACT ── */
+.contact {
+  background: var(--black);
+  padding: 100px 48px;
+}
+
+.contact-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 420px 1fr;
+  gap: 80px;
+  align-items: start;
+}
+
+.contact-details {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  margin-top: 48px;
+  padding-top: 48px;
+  border-top: 1px solid rgba(255, 255, 255, 0.07);
+}
+
+.contact-detail-item {
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+}
+
+.detail-icon {
+  font-size: 18px;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.contact-detail-item strong {
+  display: block;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.5);
+  margin-bottom: 4px;
+}
+
+.contact-detail-item a,
+.contact-detail-item span {
+  display: block;
+  font-size: 15px;
+  color: var(--white);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.contact-detail-item a:hover {
+  color: var(--lime);
+}
+
+/* ── FORM ── */
+.contact-form-wrap {
+  background: #111111;
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  padding: 48px;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.form-group label {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  color: var(--white);
+  font-family: 'Barlow', sans-serif;
+  font-size: 15px;
+  padding: 14px 16px;
+  outline: none;
+  transition: border-color 0.2s;
+  appearance: none;
+  -webkit-appearance: none;
+}
+
+.form-group select {
+  cursor: pointer;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='rgba(255,255,255,0.4)' stroke-width='1.5' fill='none'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 16px center;
+  padding-right: 40px;
+}
+
+.form-group select option {
+  background: #1a1a1a;
+  color: var(--white);
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+  color: rgba(255, 255, 255, 0.25);
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  border-color: var(--lime);
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.btn-submit {
+  background: var(--lime);
+  border: none;
+  color: var(--black);
+  font-family: 'Barlow', sans-serif;
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  padding: 18px 40px;
+  cursor: pointer;
+  align-self: flex-start;
+  transition: opacity 0.2s, transform 0.15s;
+}
+
+.btn-submit:hover {
+  opacity: 0.88;
+  transform: translateY(-1px);
+}
+
+/* ── SUCCESS STATE ── */
+.form-success {
+  text-align: center;
+  padding: 60px 40px;
+}
+
+.success-check {
+  width: 64px;
+  height: 64px;
+  background: var(--lime);
+  color: var(--black);
+  font-size: 28px;
+  font-weight: 900;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 24px;
+}
+
+.form-success h3 {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 28px;
+  font-weight: 900;
+  text-transform: uppercase;
+  color: var(--white);
+  margin-bottom: 12px;
+}
+
+.form-success p {
+  font-size: 15px;
+  color: rgba(255, 255, 255, 0.6);
+  line-height: 1.7;
+  max-width: 360px;
+  margin: 0 auto;
+}
+
+@media (max-width: 1024px) {
+  .contact-inner {
+    grid-template-columns: 1fr;
+    gap: 56px;
+  }
+}
+
+@media (max-width: 640px) {
+  .contact {
+    padding: 72px 24px;
+  }
+
+  .contact-form-wrap {
+    padding: 32px 24px;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+
+  .btn-submit {
+    width: 100%;
+    text-align: center;
+  }
+}

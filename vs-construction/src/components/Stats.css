@@ -1,0 +1,64 @@
+/* ── STATS BAR ── */
+.stats-bar {
+  background: var(--lime);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0;
+}
+
+.stat-item {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 24px;
+  border-right: 1px solid rgba(0, 0, 0, 0.12);
+  text-align: center;
+}
+
+.stat-item:last-child {
+  border-right: none;
+}
+
+.stat-value {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: clamp(40px, 5vw, 60px);
+  font-weight: 900;
+  color: var(--black);
+  line-height: 1;
+  letter-spacing: -0.02em;
+}
+
+.stat-label {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: rgba(0, 0, 0, 0.6);
+  margin-top: 6px;
+}
+
+@media (max-width: 768px) {
+  .stats-bar {
+    flex-wrap: wrap;
+  }
+
+  .stat-item {
+    flex: 0 0 50%;
+    border-right: 1px solid rgba(0, 0, 0, 0.12);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+    padding: 32px 16px;
+  }
+
+  .stat-item:nth-child(2),
+  .stat-item:nth-child(4) {
+    border-right: none;
+  }
+
+  .stat-item:nth-child(3),
+  .stat-item:nth-child(4) {
+    border-bottom: none;
+  }
+}
