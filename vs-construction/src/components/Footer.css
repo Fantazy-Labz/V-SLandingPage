@@ -24,24 +24,20 @@
 .footer-logo {
   display: flex;
   align-items: center;
-  gap: 10px;
   text-decoration: none;
   flex-shrink: 0;
   width: fit-content;
+  transition: opacity 0.2s;
 }
 
-.footer-logo-text {
-  display: flex;
-  flex-direction: column;
-  line-height: 1;
+.footer-logo:hover {
+  opacity: 0.85;
 }
 
-.footer-logo-text span {
-  font-size: 9px;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  color: var(--white);
-  font-weight: 600;
+.footer-logo-img {
+  height: 48px;
+  width: auto;
+  display: block;
 }
 
 .footer-tagline {

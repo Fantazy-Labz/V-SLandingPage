@@ -7,7 +7,8 @@
 }
 
 :root {
-  --lime: #c6f135;
+  --lime: #8cc63e; /* V&S brand green — matches the logo */
+  --lime-bright: #a4dc4f; /* lighter accent for hover states */
   --white: #ffffff;
   --black: #0a0a0a;
   --dark: #111111;

@@ -1,13 +1,5 @@
 import './Footer.css';
-
-const LogoSVG = () => (
-  <svg width="48" height="40" viewBox="0 0 56 46" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <rect width="56" height="46" fill="#0a0a0a"/>
-    <polygon points="2,4 12,4 18,28 24,4 34,4 22,42 14,42" fill="#c6f135"/>
-    <text x="30" y="36" fontFamily="Barlow Condensed, sans-serif" fontWeight="900" fontSize="28" fill="#c6f135">&amp;</text>
-    <rect x="0.75" y="0.75" width="54.5" height="44.5" fill="none" stroke="#c6f135" strokeWidth="1.5"/>
-  </svg>
-);
+import logo from '../assets/logo.png';
 
 const cols = [
   {
@@ -46,12 +38,8 @@ export default function Footer() {
     <footer className="footer">
       <div className="footer-inner">
         <div className="footer-brand">
-          <a href="#" className="footer-logo">
-            <LogoSVG />
-            <div className="footer-logo-text">
-              <span>Construction</span>
-              <span>Group</span>
-            </div>
+          <a href="#" className="footer-logo" aria-label="V&S Construction Group — Home">
+            <img src={logo} alt="V&S Construction Group" className="footer-logo-img" />
           </a>
           <p className="footer-tagline">
             Metal &amp; Concrete Construction — From Groundwork to Full Structure.

@@ -1,14 +1,6 @@
 import { useState, useEffect } from 'react';
 import './Navbar.css';
-
-const LogoSVG = () => (
-  <svg width="56" height="46" viewBox="0 0 56 46" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <rect width="56" height="46" fill="#0a0a0a"/>
-    <polygon points="2,4 12,4 18,28 24,4 34,4 22,42 14,42" fill="#c6f135"/>
-    <text x="30" y="36" fontFamily="Barlow Condensed, sans-serif" fontWeight="900" fontSize="28" fill="#c6f135">&amp;</text>
-    <rect x="0.75" y="0.75" width="54.5" height="44.5" fill="none" stroke="#c6f135" strokeWidth="1.5"/>
-  </svg>
-);
+import logo from '../assets/logo.png';
 
 const NAV_LINKS = [
   { label: 'Metal Buildings', href: '#services', active: true },
@@ -35,14 +27,8 @@ export default function Navbar() {
   return (
     <>
       <nav className="navbar">
-        <a href="#" className="logo">
-          <div className="logo-mark">
-            <LogoSVG />
-          </div>
-          <div className="logo-text">
-            <span>Construction</span>
-            <span>Group</span>
-          </div>
+        <a href="#" className="logo" aria-label="V&S Construction Group — Home">
+          <img src={logo} alt="V&S Construction Group" className="logo-img" />
         </a>
 
         <ul className="nav-links">
